@@ -5,15 +5,17 @@
 <body>
 	<h1>Modes</h1>
 	{{#each modes}}
-		{{> mode}}
+	{{> mode}}
 	{{/each}}
 </body>
 <template name="mode">
 	<h2>{{mode_name}}</h2>
 	<ul>
-	{{#each route}}
-		<li>{{>routes}}</li>
-	{{/each}}
+		{{#each route}}
+			{{#unless route_hide}}
+				<li>{{>routes}}</li>
+			{{/unless}}
+		{{/each}}
 	</ul>
 </template>
 <template name="routes">
