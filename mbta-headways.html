@@ -1,14 +1,22 @@
 <head>
-  <title>mbta-headways</title>
+	<title>mbta-headways</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+	<h1>Modes</h1>
+	{{#each modes}}
+		{{> mode}}
+	{{/each}}
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="mode">
+	<h2>{{mode_name}}</h2>
+	<ul>
+	{{#each route}}
+		<li>{{>routes}}</li>
+	{{/each}}
+	</ul>
+</template>
+<template name="routes">
+	<input type='checkbox' id="{{route_id}}" class="toggle-checked"/> 
+	<span class="text">{{route_name}}</span><br>
 </template>
