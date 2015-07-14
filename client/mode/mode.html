@@ -1,21 +1,18 @@
 <template name="mode">
 	<div class="collapsible-header">
-		<i class="material-icons">{{mode_icon mode_name}}</i>{{mode_name}}
+		<a href="#{{mode_name}}" class="collection-item" ><i class="material-icons">{{mode_icon mode_name}}</i><span class="title">{{mode_name}}</span><span class="badge blue-text accent-2" style="float:right;position:initial;">{{route.length}}</span></a>
 	</div>
 	<div class="collapsible-body">
-		{{#each route}}
 		<div class="collection">
+			{{#each route}}
 			{{#unless route_hide}}
-
-			<a href="#!" class="collection-item avatar">
-				<i class="material-icons circle">{{mode_icon ../mode_name}}</i>
-				<span class="title">{{route_name}}</span>
-				<p> Number of Routes:
-				</p>
+			<a href="#!" class="collection-item">
+				<i class="material-icons ">{{mode_icon ../mode_name}}</i>{{route_name}}
 			</a>
-
 			{{/unless}}
+
+
+			{{/each}}
 		</div>
-		{{/each}}
 	</div>
 </template>

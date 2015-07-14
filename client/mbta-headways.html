@@ -12,15 +12,36 @@
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<div class="containter">
-		<h3>Trackable Routes</h3>
-		<ul class="collapsible" data-collapsible="accordian">
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper">
+				<a href="#!" class="brand-logo center"><i class="material-icons">directions_transit</i></a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="#">Modes</a></li>
+					<li><a href="#">Favorites</a></li>
+					<li><a href="#">History</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="#">Modes</a></li>
+					<li><a href="#">Favorites</a></li>
+					<li><a href="#">History</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<h3 class="center">Trackable Routes</h3>
+		<ul class="collapsible ">
 			{{#each modes}}
 			<li>
 				{{> mode}}
 			</li>
 			{{/each}}
 		</ul>
+
 	</div>
 </body>
 
